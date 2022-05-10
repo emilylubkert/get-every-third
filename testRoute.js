@@ -1,17 +1,17 @@
- async function getEveryThird(string_to_cut) {
+
+  async function getEveryThird(string_to_cut) {
     try {
-        await fetch("http://localhost:8080/test", {
+        let result =  await fetch("http://localhost:8080/test", {
             method: "POST",
             mode: "cors",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ string_to_cut }),
         })
-            .then((response) => response.json())
-            .then((response) => {
-                console.log('response', response);
-                displayResponse(JSON.stringify(response));
-                return response;
-            })
+        result = await result.json()
+        console.log('response', result)
+        result = JSON.stringify(result);
+        displayResponse(result);
+        return result;
     } catch (error) {
         console.log(error)
     }
