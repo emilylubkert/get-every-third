@@ -25,7 +25,9 @@ function displayResponse(string) {
     displayDiv.appendChild(text);
 }
 
-//test cases - uncomment lines 30, 32, 34 (1 at a time) or copy/paste to console to see successful test cases
+//test cases - to see success:
+//local development: uncomment getEveryThird() calls (1 at a time) and refresh page
+//deployed app: copy/paste to console
 const testString = 'abc'
 // getEveryThird(testString);
 const really_long_string = testString.repeat(1000)
