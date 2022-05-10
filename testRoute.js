@@ -34,3 +34,5 @@ const really_long_string = testString.repeat(1000)
 // getEveryThird(really_long_string);
 const shortString = 'ab'
 // getEveryThird(shortString);
+
+module.exports = getEveryThird
