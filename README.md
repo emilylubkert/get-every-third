@@ -10,8 +10,8 @@ You can access the deployed app here: https://get-every-third.herokuapp.com/
 To run locally:
 - Clone this repo `git clone https://github.com/emilylubkert/lyft-application`
 - `npm install`
-- `npm run dev` to run test cases
-- `npm run start` to run app
+- `npm start` to run app
+- `npm test` to run unit tests
 
 ### How to Use
 Enter a string into the input box, and press submit to see response.
@@ -25,11 +25,11 @@ Enter a string into the input box, and press submit to see response.
     `curl -X POST https://get-every-third.herokuapp.com/test --data '{"string_to_cut": "iamyourlyftdriver"}' -H 'Content-Type: application/json' ` <br/>
     Expect to see `{"return_string":"muydv"}` <br/>
 ##### Server methods: 
+- If string_to_cut was less than 3 characters, send an error message to the client and return/exit function
 - Loop through string_to_cut and get every 3rd character with charAt()
 - Add characters to array
 - Join array elements into new string
-- If string_to_cut was less than 3 characters, return an error message to the client
-- Otherwise, return { return_string: "newString" } to client with status code 201
+- Send { return_string: "newString" } to client with status code 201
 
 ### Contact
 elubkert@gmail.com
