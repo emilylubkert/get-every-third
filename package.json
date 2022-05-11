@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "jest": "^28.1.0",
+    "jest-environment-jsdom": "^28.1.0",
     "supertest": "^6.2.3"
   }
 }
