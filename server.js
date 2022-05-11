@@ -13,7 +13,22 @@ const getEveryThird = (req, res) => {
   const { string_to_cut } = req.body;
   if (string_to_cut.length < 3) {
     console.log('Error: Initial string must be at least 3 characters');
-    res.send({ Error: 'Initial string must be at least 3 characters' });
+    res.status(400).send({ "Error": "Initial string must be at least 3 characters" });
+    return;
+  }
+  if (string_to_cut === undefined) {
+    console.log('Error: 400 Bad request');
+    res.status(400).send({ "Error": "Enter a valid string"  });
+    return;
+  }
+  if (string_to_cut === null) {
+    console.log('Error: 400 Bad request');
+    res.status(400).send({ "Error": "Enter a valid string"  });
+    return;
+  }
+  if (req.body === {}) {
+    console.log('Error: Initial string must be at least 3 characters');
+    res.status(400).send({ "Error": "Enter a valid string"  });
     return;
   }
   try {
@@ -23,11 +38,16 @@ const getEveryThird = (req, res) => {
     }
     let newString = characters.join('');
     console.log('response', { return_string: newString });
-    res.status(201).json({ return_string: newString });
+    res.status(200).json({ return_string: newString });
   } catch (error) {
     console.log(error);
   }
 };
+
+// app.get('/', (req, res) => {
+//     res.send('Hello World')
+// })
+
 
 app.post('/test', getEveryThird);
 

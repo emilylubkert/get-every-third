@@ -32,4 +32,4 @@ window.onload = () => {
     );
 };
 
-module.exports = getEveryThird;
+// module.exports = getEveryThird;
