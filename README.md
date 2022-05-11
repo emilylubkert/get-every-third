@@ -5,7 +5,7 @@
 This is a simple web application that accepts a POST request to the route "/test" with one argument "string_to_cut". This request returns a JSON object with the key “return_string” and a string containing every third letter from the original string.
 
 ### How to Run
-You can access the deployed app here: https://get-every-third.herokuapp.com/ (coming soon!)
+You can access the deployed app here: https://get-every-third.herokuapp.com/ 
 
 To run locally:
 - Clone this repo `git clone https://github.com/emilylubkert/lyft-application`
