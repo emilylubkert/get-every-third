@@ -25,8 +25,8 @@ curl -X POST http://localhost:8080/test --data '{"string_to_cut": "iamyourlyftdr
 - Server response for invalid requests: Status code 400 with the following error message
   - Request is too short: 'Initial string must be at least 3 characters'
   - Request is not a string: 'Check string and try again'
-  - Request body is empty, or undefined: 'Cannot read properties of undefined (reading 'length\''
-  - Request is null: 'Cannot read properties of null (reading 'length\''
+  - Request body is empty, or undefined: 'Cannot read properties of undefined (reading 'length')'
+  - Request is null: 'Cannot read properties of null (reading 'length')'
   
 
 ### Contact
