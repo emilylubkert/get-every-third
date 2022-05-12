@@ -10,7 +10,7 @@ This is a simple web application that accepts a POST request to the route "/test
     Expect to see `{"return_string":"muydv"}` <br/>
 
 To run locally:
-- Clone this repo `git clone https://github.com/emilylubkert/lyft-application`
+- Clone this repo `git clone https://github.com/emilylubkert/get-every-third.git`
 - `npm install`
 - `npm start` to run app
 - `npm test` to run unit tests
