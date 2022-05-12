@@ -1,8 +1,7 @@
-let request = require('supertest');
-const express = require('express');
-const app = express();
+/* eslint-disable no-undef */
+const request = require('supertest');
 
-const baseURL = 'http://localhost:8080';
+const baseURL = 'https://get-every-third-server.herokuapp.com';
 
 describe('POST /test', () => {
   it('should return 200 and work', async () => {
@@ -17,11 +16,11 @@ describe('POST /test', () => {
 describe('works with a long string', () => {
   it('should return 200 and be a string with (length*1000)/3-20', async () => {
     const testString = 'abc';
-    const really_long_string = testString.repeat(1000);
+    const reallyLongString = testString.repeat(1000);
     const response = await request(baseURL)
       .post('/test')
       .set('Content-Type', 'application/json')
-      .send({ string_to_cut: really_long_string });
+      .send({ string_to_cut: reallyLongString });
     expect(response.statusCode).toBe(200);
     expect(typeof response.text).toBe('string');
     expect(response.text.length).toEqual(1020);
@@ -47,7 +46,7 @@ describe('request too short', () => {
       .send({ string_to_cut: 'ab' });
     expect(response.statusCode).toBe(400);
     expect(response.text).toMatch(
-      '{"error":"Initial string must be at least 3 characters"}'
+      '{"error":"Initial string must be at least 3 characters"}',
     );
   });
 });
@@ -60,7 +59,7 @@ describe('request empty', () => {
       .send({});
     expect(response.statusCode).toBe(400);
     expect(response.text).toMatch(
-      '{"error":"Cannot read properties of undefined (reading \'length\')"}'
+      '{"error":"Cannot read properties of undefined (reading \'length\')"}',
     );
   });
 });
@@ -73,7 +72,7 @@ describe('request is null', () => {
       .send({ string_to_cut: null });
     expect(response.statusCode).toBe(400);
     expect(response.text).toMatch(
-      '{"error":"Cannot read properties of null (reading \'length\')"}'
+      '{"error":"Cannot read properties of null (reading \'length\')"}',
     );
   });
 });
@@ -86,7 +85,7 @@ describe('request is undefined', () => {
       .send({ string_to_cut: undefined });
     expect(response.statusCode).toBe(400);
     expect(response.text).toMatch(
-      '{"error":"Cannot read properties of undefined (reading \'length\')"}'
+      '{"error":"Cannot read properties of undefined (reading \'length\')"}',
     );
   });
 });
