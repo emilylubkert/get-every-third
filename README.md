@@ -9,12 +9,10 @@ This is a simple web application that accepts a POST request to the route "/test
     `curl -X POST https://get-every-third-server.herokuapp.com/test --data '{"string_to_cut": "iamyourlyftdriver"}' -H 'Content-Type: application/json' ` <br/>
     Expect to see `{"return_string":"muydv"}` <br/>
 
-To run locally:
+- To test:
 - Clone this repo `git clone https://github.com/emilylubkert/get-every-third.git`
-- `npm install`
-- `npm start` to run app
-curl -X POST http://localhost:8080/test --data '{"string_to_cut": "iamyourlyftdriver"}' -H 'Content-Type: application/json'
-- `npm test` to run unit tests
+  - `npm install`
+  - `npm test` to run unit tests
 
 ### API
 #### POST /test  
