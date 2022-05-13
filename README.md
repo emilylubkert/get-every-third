@@ -14,6 +14,9 @@ This is a simple web application that accepts a POST request to the route "/test
   - `npm install`
   - `npm test` to run unit tests
 
+To see a version of this app with a front end, visit https://frontend-lyft.herokuapp.com/. <br/>
+The repo for that code is https://github.com/emilylubkert/lyft-application-with-frontend
+
 ### API
 #### POST /test  
 - Parameter: string_to_cut, the string that we want to get every 3rd character from  
