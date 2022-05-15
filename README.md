@@ -10,7 +10,8 @@ This is a simple web application that accepts a POST request to the route "/test
     Expect to see `{"return_string":"muydv"}` <br/>
 
 - To test:
-- Clone this repo `git clone https://github.com/emilylubkert/get-every-third.git`
+  - Fork this repo
+  - Clone this repo `git clone https://github.com/<your-user-name>/get-every-third.git`
   - `npm install`
   - `npm test` to run unit tests
 
